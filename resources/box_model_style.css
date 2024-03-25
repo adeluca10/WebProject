@@ -1,0 +1,55 @@
+/*
+  purple: #af2063
+  Orange: #d47b09
+  white:  #FFFFFF
+*/
+body {
+  padding: 10px;
+  font-size: 16px;
+}
+
+h1 {
+  color: #af2063;
+  text-align: center;
+}
+
+th, td {
+ 
+  border: #d47b09 solid 7px;
+  padding: 6px 12px;
+  border-style: dotted;
+  padding: 8px 15px;
+  }
+
+table {
+  border-collapse: collapse;
+    
+  }
+
+a {
+  color: #af2063;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d47b09;
+}
+
+p.stylized {
+  background-color: #af2063;
+  color: white;
+  width: 660px;
+  padding:  10px;
+  border: #d47b09 dashed 10px;
+  margin: 5px;
+}
+
+div.formatted {
+  color: white;
+  background-color: #af2063;
+  width: 646px;
+  padding: 5px 10px;
+  border: #d47b09 solid 5px;
+  margin: 5px;
+}

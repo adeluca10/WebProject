@@ -1,0 +1,43 @@
+body {
+    background-color: #000000;;
+    padding: 24px 12px 24px 12px;
+}
+
+a {
+    color: #4efa30;
+    font-weight: bold;
+}
+
+a:hover {
+    color:rgb(65, 65, 255);
+}
+
+th, td {
+    border: #ffffff groove 3px;
+    padding: 6px 12px;
+}
+
+h1.header1, p.paragraph1 {
+    color: white;
+}
+
+h2.header2, p.paragraph2 {
+    color: rgb(255, 0, 0);
+}
+
+p.paragraph3, li {
+    color: yellow;
+} 
+
+p, li, table {
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    line-height: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: orange;
+}

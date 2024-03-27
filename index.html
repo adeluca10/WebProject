@@ -2,13 +2,161 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <title>Rubiks Cube Overview</title>
+
+    <meta name="description" content="A brief overview of a rubiks cube">
+    <meta name="keywords" content="Rubiks Cube, Colors, Puzzle, Algorithm, Patterns ">
+    <meta name="author" content= "Anthony Deluca">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="resources/index_styles.css">
 </head>
 <body>
     <ul>
         <li><a href="running.html">Trial Running</a></li>
         <li><a href="box_model.html">CSS Box Model</a></li>
     </ul>
+
+    <h1 class="header1">Rubiks Cube Sides</h1>
+
+    <p class="paragraph1">
+        The rubiks cube has a total of 6 sides, each having a different color. Because of this the pieces on each side
+        must be identified in order to get them back in their proper positions. A singular edge piece has 2 colors and there is 4 
+        of them on each side. Corner Pieces have 3 colors on them and there are 4 each per color. Each color also has a center piece and is only 1 color 
+        Colors positions do matter as colors that are opposite of each other will not have a edge piece or corner piece with both colors on it. Red is opposite of orange,
+        blue is opposite of green, and white is opposite of yellow
+    </p>
+
+    
+    
+    <img src="resources/pieceTypes.jpg" alt="A picture of 3 cubes shading out most pieces on the cube to show the 
+    specific pieces lined up with their name" width="600" height="300">
+
+    <h2 class="header2">Turning the Cube</h2>
+
+    <p class="paragraph2">
+        Just like the pieces in a rubiks cube there is also identification for turning the cube.  R is for right wedge(clockwise is up), L is for left side (clockwise is down), 
+        U is the top wedge(clockwise is left), D is for the bottom wedge (clockwise is right), F is for rotating the side in front of you (clockwise is left), back is the wedge opposite of (clockwise it right) 
+        Also 2 means that the side needs to be turned twice as it doesnt matter if you turn it clockwise or counter clockwise. For counter clickwise turns there is an apostrophy next to the letter to show it 
+        turns in the opposite direction. <a href="https://blocem.blogspot.com/2012/03/notasi-dan-bagian-bagian-rubik.html">This link</a> can show more about all these details(this site is where I got the first image from).         
+    </p>
+
+    <img src="resources/rubik-cube-algorithms.png" alt="Apicture showing all the turns clockwise and their letter of identification"
+    width="700" height="400">
+
+    <p class="paragraph3">
+        Below are some patterns you can create with the rubiks cube using 
+        the algorithms listed below which can help get you familiar with using algorithms. To perform the correctly <a href="https://www.youtube.com/watch?v=vtY7hOIAj6E"> Use this video</a> 
+        and follow along with the youtuber doing the alorithms to perform them with 100% success(Also I did test these algorithms before putting them in the list)
+    </p>
+
+    <ul>
+    <li>F L F U' R U F2 L2 U' L' B D' B' L2 U</li>
+    <li>U' L' F' R2 B' R F U B2 B' L U' F U R F'</li>
+    <li>F B' U F U F U L B L2 B' U F' L U L' B</li>
+    <li>F U2 L F L' B L U B' R' L' U R' D' F' B R2</li>
+    <li>U' B2 U L2 D L2 R2 D' B' R D' L R' B2 U2 F' L' U'</li>
+    <li>R L F B R L F B R L F B R2 B2 L2 R2 B2 L2</li>
+    <li>F2 R' B' U R' L F' L F' B D' R B L2</li>
+    <li>L U F2 R L' U2 B2 U D B2 L F B' R' R' L F' R</li>
+    <LI>U B2 R2 B2 L2 F2 R2 D' F2VL2 B F' L F2 D U' R2 F' L' R'</LI>
+    </ul>
+
+    <h2>Solving the Rubiks Cube</h2>
+
+    <h4>clicking on the image will take you to a source that can show some more physical representations of the steps</h4>
+
+    <a href="https://hobbylark.com/puzzles/Rubik-Cube-Algorithms">
+        <img src="resources/cubingSteps.jpg" alt="A visual representation of each of the steps mentioned in the table"
+        width="800" height="400">
+    </a>
+    
+    <table>
+        <tr>
+            <th>Steps</th>
+            <th>Description</th>
+            <th>Algorithm(s)</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>1. <br> Main side edge pieces</td>
+            <td>Solve any colored cross correctly. Connect all 4 edge pieces to the same colored middle.
+                Since edge pieces have 2 colors, make sure the other color it connect to the same </td>
+            <td>N/A</td>
+            <td>solving the white side find an edge piece like white red then move to connect with the white middle
+                then can rotate the white side so the edge pieces also connects to the red middle
+            </td>
+        </tr>
+        <tr>
+            <td>2. <br> Main side Corner pieces</td> 
+            <td>Connect corner pieces to the same colored side to the solved edge pieces. Connect corner 
+                pieces to solved edge pieces. Since corner pieces have 3 colores you must match the same
+                colors to each side of the corner piece with the same colored middle. </td>
+            <td>N/A</td>
+            <td>With all the white edge pieces connected to their other sides move a corner piece like white red green to the low side 
+                row and position it with the green on the green side and white on the red. Move the edge piece up and turn the corner piece
+                on top of and move the connected pieces back down
+            </td>
+        </tr>
+        <tr>
+            <td>3. <br> Side edge Pieces</td>
+            <td> Find an edge piece that does not have the opposite color of the side you solved. Connect
+                 it to the same colored middle forming an upside down "T". Determine the left or right algorithm 
+                 by looking at the other color of the edge piece and that same colores middle. If on the left side 
+                 then do the left algorithm and vise versa for the right.</td>
+            <td>U' L'U' L U F U F' <br> - <br>   U R U R' U' F' U' F</td>
+            <td>say you found a red blue piece and you rotate it to connect it to the red middle(could be blue to connect to the blue middle)
+                since blue is to the left of red do the left algorithm on that piece and red side with the yellow side facing up
+            </td>
+        </tr>
+        <tr>
+            <td>4. <br> Opposite side edge pieces</td>
+            <td>Make sure all side edge pieces are correctly placed. Do the algorithm until a half plus is the the
+                opposite side. Rotate the half plus until one piece points left and one points away from you. Doing 
+                the algorithm puts all edge pieces on the opposite side(there may also be corner pieces when achieving the opposite side cross).
+            </td>
+            <td>F U R U' R' F'</td>
+            <td>Say you have 2 yellow edge pieces on the yellow side rotate the cube to so the edge pieces are horizontal then do the algorithm with the yellow side facing up
+                and one of the side colors is facing you. This should give a half cross, then repeat the algorithm with the half cross of yellow pointing up and left to get all the 
+                yellow edge pieces on the yellow side </td>
+        </tr>
+        <tr>
+            <td>5. <br> Opposite side corner pieces</td>
+            <td>Make sure all 4 edge pieces are placed on the opposite side(will be solved). Do either algorithm until one opposite
+                corner piece is on the opposite side. Rotate the cube so the certain corner piece points at you. If 
+                you look in the left and right side of this corner piece and you will find another corner piece on the
+                left or right. Do the the right/left depending on the side it is on to determine the correct algorithm.
+                This will solve that side.</td>
+            <td>LEFT: L' U' L U' L' U2 L <br> - <br> RIGHT: R U R' U R U2 R'</break></td>
+            <td>You will have to do some experimenting by doing either algorithms with the yellow facing up. But once you get the singular yellow corner piece on the yellow side. 
+                Say the corner piece is on your right(will be on a side middle like red) from the yellow piece facing you, rotate that  yellow corner piece facing you and the yellow side
+                facing up, then do the right algorithm on that yellow piece on the red side
+            </td>
+        </tr>
+        <tr>
+            <td>6. <br> side corner pieces</td>
+            <td>Find 2 of the same colored corner pieces on the same side and rotate it to the back. If there is no matching corner pieces then do
+                the algorithm anywhere to get a pair. Then doing the algorithm places all side corner pieces on the matching sides. </td>
+            <td>R' F R' B2 R F' R' B2 R2</td>
+            <td>once the yellow side say you find 2 red pieces and a blue piece in the middle bellow the yelloe side, rotate it to the red side and then do the alogorithm on the 
+                orange side </td>
+        </tr>
+        <tr>
+            <td>7. <br> Rotate side edge pieces</td>
+            <td>Rotating the edge pieces to their middle with algorithms. Make sure the unsolved edge pieces are on the U layer
+                If one side is solved put put that in the back to determine the alogorithm. If none are solved then you can do either 
+                algorithm to solve it. 
+            </td>
+            <td>CLOCKWISE: R U' R U R U R U' R' U' R2 <br> - <br> COUNTER CLOCKWISE: R2 U R U R' U' R' U' R' U' R </BR></td>
+            <td>say you get a silved side which is orange do the next alorithm on the red side. Look how there is on piece of red on the blue side while
+                one piece of gree is on the red side, do the counter clockwise alorithm with the yellow side facing up to rotate these pieces to their proper sides
+            </td>
+        </tr>
+
+    </table>
+
+
+
+
 </body>
 </html>
